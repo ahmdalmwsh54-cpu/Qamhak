@@ -3,154 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قمحك - زراعة أذكى</title>
+    <title>قمحك - مستقبل الزراعة الذكية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-green: #2d5a27;
-            --light-green: #e8f5e9;
-            --accent-green: #4caf50;
-            --text-dark: #1b3022;
+            --dark-green: #2d5a27;
+            --main-green: #4caf50;
+            --bg-green: #f1f8f1;
+            --card-bg: #e8f5e9;
+            --white: #ffffff;
         }
 
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9fbf9;
-            color: var(--text-dark);
+            background-color: var(--bg-green);
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* الهيدر */
+        /* رأس الصفحة - Hero Section */
         header {
-            background-color: var(--primary-green);
-            color: white;
-            padding: 60px 20px;
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 50px 20px;
             text-align: center;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
+            border-bottom: 8px solid var(--main-green);
         }
 
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: auto; }
+        header h1 { font-size: 2.8rem; margin: 0; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
 
-        /* الأقسام العامة */
+        /* الأقسام الرئيسية */
         section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .section-title {
-            text-align: center;
-            color: var(--primary-green);
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-        }
+        h2 { color: var(--dark-green); text-align: center; border-bottom: 2px solid var(--main-green); display: inline-block; padding-bottom: 5px; }
+        .center-title { text-align: center; margin-bottom: 30px; }
 
-        /* بطاقات الخدمات والرؤية */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
+        /* البطاقات الذكية */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .card {
-            background: white;
+            background: var(--card-bg);
             padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s;
-            border: 1px solid var(--light-green);
+            border: 1px solid rgba(76, 175, 80, 0.2);
         }
 
-        .card:hover { transform: translateY(-5px); }
-        .card i { font-size: 40px; color: var(--accent-green); margin-bottom: 15px; }
-        .card h3 { color: var(--primary-green); margin-bottom: 10px; }
+        .card i { font-size: 45px; color: var(--dark-green); margin-bottom: 15px; }
+        .card h3 { color: var(--dark-green); margin-bottom: 15px; }
 
-        /* تنسيق خاص للخدمات */
-        .service-card { background-color: var(--light-green); }
+        /* قسم المتجر المطور */
+        .store-section { background: var(--white); border-radius: 20px; padding: 30px; margin-top: 20px; border: 2px dashed var(--main-green); }
 
-        footer {
-            background: var(--primary-green);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-        }
-
-        /* لوغو افتراضي */
-        .logo-img {
-            width: 120px;
-            height: 120px;
-            background: white;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            display: inline-block;
-            padding: 10px;
-        }
+        /* التذييل */
+        footer { background: var(--dark-green); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .social-links i { font-size: 30px; margin: 0 15px; cursor: pointer; transition: 0.3s; }
+        .social-links i:hover { color: var(--main-green); }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-img">
-        <img src="logo.png" alt="قمحك" style="width:100%; height:auto;">
-    </div>
     <h1>قمحك</h1>
     <p>زراعة أذكى ، إنتاج أعلى ، مستقبل أخضر ومستدام</p>
 </header>
 
-<section id="about">
-    <div class="card" style="background: var(--light-green); border: none;">
-        <h3>من نحن</h3>
-        <p>قمحك هو تطبيق زراعي ذكي يعمل على تحسين الزراعة في الأردن من خلال تعزيز الابتكار واستخدام الذكاء الاصطناعي والتقنيات الحديثة. نهدف إلى حل التحديات التي تواجه المزارعين وتوفير فرص عمل حقيقية.</p>
+<section id="intro">
+    <div class="card" style="background: var(--white); border: 2px solid var(--main-green);">
+        <h3>عن قمحك</h3>
+        <p>تطبيق أردني مبتكر يجمع بين الذكاء الاصطناعي والتكنولوجيا الحديثة لتطوير القطاع الزراعي وتمكين المزارعين وتوفير حلول عملية وشاملة.</p>
     </div>
 </section>
 
-<section id="vision-mission">
-    <div class="grid-container">
+<section id="vision">
+    <div class="grid">
         <div class="card">
             <i class="fas fa-eye"></i>
             <h3>رؤيتنا</h3>
-            <p>تحقيق تنمية زراعية مستدامة تواكب العصر وتجعل الأردن مركزاً للابتكار الزراعي.</p>
+            <p>تحقيق تنمية زراعية مستدامة تواكب العصر وتحسن كفاءة الإنتاج في الأردن.</p>
         </div>
         <div class="card">
             <i class="fas fa-bullseye"></i>
             <h3>رسالتنا</h3>
-            <p>تمكين المزارعين وتحسين كفاءة الإنتاج وتعزيز التواصل المباشر بين أطراف القطاع.</p>
+            <p>تمكين المزارعين وتسهيل التواصل بين أطراف القطاع الزراعي باستخدام الحلول الذكية.</p>
         </div>
     </div>
 </section>
 
 <section id="services">
-    <h2 class="section-title">خدمات قمحك الذكية</h2>
-    <div class="grid-container">
-        <div class="card service-card">
-            <i class="fas fa-shopping-basket"></i>
-            <h3>المتجر الزراعي المباشر</h3>
-            <p>سوق إلكتروني يتيح للمتاجر عرض الخضروات والفواكه والمنتجات الزراعية بالصور والأسعار، مع خدمة التوصيل الفوري للمستهلك لضمان الشفافية والجودة.</p>
-        </div>
-
-        <div class="card service-card">
-            <i class="fas fa-user-tie"></i>
+    <div class="center-title"><h2>خدمات التطبيق</h2></div>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-briefcase"></i>
             <h3>التوظيف الزراعي</h3>
-            <p>ربط المزارعين بأصحاب الأراضي والشركات الزراعية لتوفير فرص عمل متخصصة وتحسين دخل العاملين في القطاع.</p>
+            <p>ربط المزارعين بأصحاب الأراضي والشركات لتوفير فرص عمل مناسبة وزيادة الدخل.</p>
         </div>
+        <div class="card">
+            <i class="fas fa-robot"></i>
+            <h3>الاستشارات الذكية</h3>
+            <p>تقديم نصائح علمية حول التربة ومكافحة الآفات باستخدام تحليلات الذكاء الاصطناعي.</p>
+        </div>
+    </div>
 
-        <div class="card service-card">
-            <i class="fas fa-microchip"></i>
-            <h3>الاستشارات بالذكاء الاصطناعي</h3>
-            <p>تقديم نصائح علمية دقيقة حول جودة التربة، مكافحة الآفات، ومواعيد الري بناءً على تحليلات ذكية ومناخ الأردن.</p>
-        </div>
+    <div class="store-section">
+        <div style="text-align: center;"><i class="fas fa-store" style="font-size: 40px; color: var(--main-green);"></i></div>
+        <h3 style="text-align: center; color: var(--dark-green);">متجر قمحك للمنتجات الطازجة</h3>
+        <p>نقدم للمتاجر منصة احترافية لعرض منتجات الخضروات والفواكه والاعشاب الطبية بالصور والأسعار. نوفر للمستهلك تجربة شراء سهلة مع ضمان التوصيل الفوري لضمان الجودة والطعم الطازج من الأرض إلى منزلك مباشرة.</p>
     </div>
 </section>
 
 <footer>
-    <p>تواصل معنا لدعم المستقبل الأخضر</p>
-    <div style="font-size: 24px; margin-top: 10px;">
-        <i class="fab fa-whatsapp" style="margin: 0 10px;"></i>
-        <i class="fab fa-facebook" style="margin: 0 10px;"></i>
-        <i class="fas fa-envelope" style="margin: 0 10px;"></i>
+    <p>تواصل مع فريق قمحك</p>
+    <div class="social-links">
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fas fa-envelope"></i>
     </div>
-    <p style="font-size: 12px; margin-top: 20px;">© 2026 قمحك – جميع الحقوق محفوظة</p>
+    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">© 2026 قمحك – جميع الحقوق محفوظة</p>
 </footer>
 
 </body>
 </html>
+
 

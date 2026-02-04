@@ -1,97 +1,156 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>قمحك</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f6f7f5;
-      color: #1f3d1f;
-      line-height: 1.8;
-    }
-    header {
-      background-color: #3f7f3f;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #3f7f3f;
-      margin-bottom: 15px;
-    }
-    footer {
-      background-color: #3f7f3f;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قمحك - زراعة أذكى</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --light-green: #e8f5e9;
+            --accent-green: #4caf50;
+            --text-dark: #1b3022;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fbf9;
+            color: var(--text-dark);
+        }
+
+        /* الهيدر */
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: auto; }
+
+        /* الأقسام العامة */
+        section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        .section-title {
+            text-align: center;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        /* بطاقات الخدمات والرؤية */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid var(--light-green);
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card i { font-size: 40px; color: var(--accent-green); margin-bottom: 15px; }
+        .card h3 { color: var(--primary-green); margin-bottom: 10px; }
+
+        /* تنسيق خاص للخدمات */
+        .service-card { background-color: var(--light-green); }
+
+        footer {
+            background: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        /* لوغو افتراضي */
+        .logo-img {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
+<header>
+    <div class="logo-img">
+        <img src="logo.png" alt="قمحك" style="width:100%; height:auto;">
+    </div>
     <h1>قمحك</h1>
-    <p>مستقبل الزراعة الذكية في الأردن</p>
-    <p>
-      تطبيق أردني مبتكر يجمع بين الذكاء الاصطناعي والتكنولوجيا الحديثة لتطوير القطاع الزراعي وتمكين المزارعين وتوفير فرص عمل وتقديم حلول عملية وشاملة لكل من يعمل في الزراعة
-    </p>
-  </header>
+    <p>زراعة أذكى ، إنتاج أعلى ، مستقبل أخضر ومستدام</p>
+</header>
 
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>
-      قمحك هو تطبيق زراعي ذكي يعمل على تحسين الزراعة في الأردن من خلال تعزيز الابتكار واستخدام الذكاء الاصطناعي والتقنيات الحديثة.
-    </p>
-  </section>
+<section id="about">
+    <div class="card" style="background: var(--light-green); border: none;">
+        <h3>من نحن</h3>
+        <p>قمحك هو تطبيق زراعي ذكي يعمل على تحسين الزراعة في الأردن من خلال تعزيز الابتكار واستخدام الذكاء الاصطناعي والتقنيات الحديثة. نهدف إلى حل التحديات التي تواجه المزارعين وتوفير فرص عمل حقيقية.</p>
+    </div>
+</section>
 
-  <section id="goals">
-    <h2>أهدافنا</h2>
-    <p>
-      نهدف إلى حل التحديات التي تواجه المزارعين، وتسهيل تسويق المنتجات الزراعية، وتوفير فرص عمل وتحسين دخل العاملين في هذا القطاع الحيوي.
-    </p>
-  </section>
+<section id="vision-mission">
+    <div class="grid-container">
+        <div class="card">
+            <i class="fas fa-eye"></i>
+            <h3>رؤيتنا</h3>
+            <p>تحقيق تنمية زراعية مستدامة تواكب العصر وتجعل الأردن مركزاً للابتكار الزراعي.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-bullseye"></i>
+            <h3>رسالتنا</h3>
+            <p>تمكين المزارعين وتحسين كفاءة الإنتاج وتعزيز التواصل المباشر بين أطراف القطاع.</p>
+        </div>
+    </div>
+</section>
 
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <p>
-      تقديم حلول ذكية، دعم تقني، وتحليلات تساعد المزارعين على اتخاذ قرارات أفضل وزيادة الإنتاجية.
-    </p>
-  </section>
+<section id="services">
+    <h2 class="section-title">خدمات قمحك الذكية</h2>
+    <div class="grid-container">
+        <div class="card service-card">
+            <i class="fas fa-shopping-basket"></i>
+            <h3>المتجر الزراعي المباشر</h3>
+            <p>سوق إلكتروني يتيح للمتاجر عرض الخضروات والفواكه والمنتجات الزراعية بالصور والأسعار، مع خدمة التوصيل الفوري للمستهلك لضمان الشفافية والجودة.</p>
+        </div>
 
-  <section id="team">
-    <h2>فريقنا</h2>
-    <p>
-      فريق أردني يؤمن بالزراعة الذكية وبمستقبل أخضر ومستدام.
-    </p>
-  </section>
+        <div class="card service-card">
+            <i class="fas fa-user-tie"></i>
+            <h3>التوظيف الزراعي</h3>
+            <p>ربط المزارعين بأصحاب الأراضي والشركات الزراعية لتوفير فرص عمل متخصصة وتحسين دخل العاملين في القطاع.</p>
+        </div>
 
-  <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p>
-      يسعدنا تواصلكم معنا لدعم الزراعة الذكية وتحقيق تنمية مستدامة.
-    </p>
-  </section>
+        <div class="card service-card">
+            <i class="fas fa-microchip"></i>
+            <h3>الاستشارات بالذكاء الاصطناعي</h3>
+            <p>تقديم نصائح علمية دقيقة حول جودة التربة، مكافحة الآفات، ومواعيد الري بناءً على تحليلات ذكية ومناخ الأردن.</p>
+        </div>
+    </div>
+</section>
 
-  <footer>
-    © 2026 قمحك – جميع الحقوق محفوظة
-  </footer>
+<footer>
+    <p>تواصل معنا لدعم المستقبل الأخضر</p>
+    <div style="font-size: 24px; margin-top: 10px;">
+        <i class="fab fa-whatsapp" style="margin: 0 10px;"></i>
+        <i class="fab fa-facebook" style="margin: 0 10px;"></i>
+        <i class="fas fa-envelope" style="margin: 0 10px;"></i>
+    </div>
+    <p style="font-size: 12px; margin-top: 20px;">© 2026 قمحك – جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
+
